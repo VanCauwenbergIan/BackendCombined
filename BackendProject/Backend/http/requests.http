@@ -1,0 +1,344 @@
+
+GET http://localhost:3000/setup HTTP/1.1
+
+###
+
+GET http://localhost:3000/genres HTTP/1.1
+
+###
+
+GET http://localhost:3000/companies HTTP/1.1
+
+###
+
+GET http://localhost:3000/franchises HTTP/1.1
+
+###
+
+GET http://localhost:3000/gamemodes HTTP/1.1
+
+###
+
+GET http://localhost:3000/playerperspectives HTTP/1.1
+
+###
+
+GET http://localhost:3000/themes HTTP/1.1
+
+###
+
+GET http://localhost:3000/platforms HTTP/1.1
+
+###
+
+GET http://localhost:3000/games HTTP/1.1
+
+###
+
+GET http://localhost:3000/games/62648d6bc476ac01dcd80a71 HTTP/1.1
+
+###
+
+PUT http://localhost:3000/genres/625f35ca6d476218346a3dfd HTTP/1.1
+Content-Type: application/json
+
+{
+"id": "625f35ca6d476218346a3dfd",
+"name": "Music",
+"createdOn": "2022-04-19T22:20:58.375Z"
+}
+
+###
+
+PUT http://localhost:3000/companies/625f3a0a23345ba753604f90 HTTP/1.1
+Content-Type: application/json
+
+{
+"type": "developer",
+"averageRating": null,
+"country": "Japan",
+"parentCompanyId": null,
+"subcompanyIds": null,
+"id": "625f3a0a23345ba753604f90",
+"name": "FromSoftware",
+"createdOn": "2022-04-19T22:39:06.085Z"
+}
+
+###
+
+PUT http://localhost:3000/franchises/625f2f636f10b8f02d5f97db HTTP/1.1
+Content-Type: application/json
+
+{
+"id": "625f2f636f10b8f02d5f97db",
+"name": "Metro",
+"createdOn": "2022-04-19T21:53:39.071Z"
+}
+
+###
+
+PUT http://localhost:3000/gamemodes/625f31236e495f62b556f1e3 HTTP/1.1
+Content-Type: application/json
+
+{
+"id": "625f31236e495f62b556f1e3",
+"name": "Split Screen",
+"createdOn": "2022-04-19T22:01:07.213Z"
+}
+
+###
+
+PUT http://localhost:3000/playerperspectives/625f334581586edfafce4fa0 HTTP/1.1
+Content-Type: application/json
+
+{
+"id": "625f334581586edfafce4fa0",
+"name": "Text",
+"createdOn": "2022-04-19T22:10:13.563Z"
+}
+
+###
+
+PUT http://localhost:3000/themes/625f3a0a23345ba753604fa6 HTTP/1.1
+Content-Type: application/json
+
+{
+"id": "625f3a0a23345ba753604fa6",
+"name": "Open World",
+"createdOn": "2022-04-19T22:39:06.206Z"
+}
+
+###
+
+PUT http://localhost:3000/games/62648d6bc476ac01dcd80a71 HTTP/1.1
+Content-Type: application/json
+
+{
+"franchiseId": null,
+"ratings": [
+{
+"id": "62648d6bc476ac01dcd80a71",
+"author": "some_dumbass420",
+"score": 10,
+"comment": "single handedly cured my entire family of cancer",
+"createdOn": "2022-04-23T15:09:25.012Z"
+},
+{
+"id": "1ca73947-6ec2-43df-9cff-39c704b2f220",
+"author": "some_dumbass420",
+"score": 5,
+"comment": "nevermind, found a single bug",
+"createdOn": "2022-04-23T15:09:25.013Z"
+}
+],
+"coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png",
+"releaseDates": [
+{
+"id": "9e7f7882-ea49-4ef4-96c7-080eb210bf1c",
+"timeStamp": 1645743600,
+"platformIds": [
+"625f3b63dd256f5e40cabb32",
+"625f3b63dd256f5e40cabb33",
+"625f3b63dd256f5e40cabb34",
+"625f3b63dd256f5e40cabb35",
+"625f3b63dd256f5e40cabb36"
+],
+"createdOn": "2022-04-23T15:09:25.013Z"
+}
+],
+"gameModeIds": [
+"625f31236e495f62b556f1e2",
+"625f31236e495f62b556f1e1",
+"625f31236e495f62b556f1e0"
+],
+"playerPerspectiveIds": [
+"625f334581586edfafce4f9e"
+],
+"developerId": "625f3a0a23345ba753604f90",
+"publisherId": "625f3a0a23345ba753604f91",
+"genreIds": [
+"625f35ca6d476218346a3dfc"
+],
+"themeIds": [
+"625f3a0a23345ba753604fa3",
+"625f3a0a23345ba753604fa4",
+"625f3a0a23345ba753604fa5",
+"625f3a0a23345ba753604fa6"
+],
+"platformIds": [
+"625f3b63dd256f5e40cabb32",
+"625f3b63dd256f5e40cabb33",
+"625f3b63dd256f5e40cabb34",
+"625f3b63dd256f5e40cabb35",
+"625f3b63dd256f5e40cabb36"
+],
+"id": "62648d6bc476ac01dcd80a71",
+"name": "Elden Ring",
+"createdOn": "2022-04-23T15:09:25.014Z"
+}
+
+###
+
+PUT http://localhost:3000/games/625f40fff118ae0883eff637/releasedates/a7af37ab-222f-41aa-a588-6f93faa171bd HTTP/1.1
+Content-Type: application/json
+
+{
+"id": "a7af37ab-222f-41aa-a588-6f93faa171bd",
+"timeStamp": 1645743600,
+"platformId": "625f3b63dd256f5e40cabb35"
+}
+
+###
+
+PUT http://localhost:3000/platforms/625f3b63dd256f5e40cabb32 HTTP/1.1
+Content-Type: application/json
+
+{
+"releaseDate": 1385074800,
+"manufacturerId": "625f3a0a23345ba753604f9f",
+"id": "625f3b63dd256f5e40cabb32",
+"name": "Xbox One X | S",
+"createdOn": "2022-04-19T22:44:51.003Z"
+}
+
+###
+
+POST http://localhost:3000/games HTTP/1.1
+Content-Type: application/json
+
+{
+        "name": "Elden Ring 2: Electric Boogaloo",
+        "franchiseId": null,
+        "ratings": [
+          {
+            "score": 10,
+            "comment": "single handedly cured my entire family of cancer",
+            "author": "some_dumbass420"
+          },
+          {
+            "score": 5,
+            "comment": "nevermind, found a single bug",
+            "author": "some_dumbass420"
+          }
+        ],
+        "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png",
+        "releaseDates": [
+          {
+            "timeStamp": 1645743600,
+            "platformIds": [
+              "625f3b63dd256f5e40cabb32",
+              "625f3b63dd256f5e40cabb33",
+              "625f3b63dd256f5e40cabb34",
+              "625f3b63dd256f5e40cabb35",
+              "625f3b63dd256f5e40cabb36"
+            ]
+          }
+        ],
+        "gameModeIds": [
+          "625f31236e495f62b556f1e2",
+          "625f31236e495f62b556f1e1",
+          "625f31236e495f62b556f1e0"
+        ],
+        "playerPerspectiveIds": [
+          "625f334581586edfafce4f9e"
+        ],
+        "developerId": "625f3a0a23345ba753604f90",
+        "publisherId": "625f3a0a23345ba753604f91",
+        "genreIds": [
+          "625f35ca6d476218346a3dfc"
+        ],
+        "themeIds": [
+          "625f3a0a23345ba753604fa3",
+          "625f3a0a23345ba753604fa4",
+          "625f3a0a23345ba753604fa5",
+          "625f3a0a23345ba753604fa6"
+        ],
+        "platformIds": [
+          "625f3b63dd256f5e40cabb32",
+          "625f3b63dd256f5e40cabb33",
+          "625f3b63dd256f5e40cabb34",
+          "625f3b63dd256f5e40cabb35",
+          "625f3b63dd256f5e40cabb36"
+        ]
+      }
+
+###
+
+POST http://localhost:3000/platforms HTTP/1.1
+Content-Type: application/json
+
+[
+{
+"releaseDate": 	1324076400,
+"manufacturerId": "625f3a0a23345ba753604fa0",
+"name": "PC 2"
+}
+]
+
+###
+
+POST http://localhost:3000/games/62648d6bc476ac01dcd80a85/ratings HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkRhdmUgRGF2aWRzb24iLCJjaXR5IjoiRHVyYnV5IiwibmJmIjoxNjUxMzU4ODUyLCJleHAiOjE2NTEzNjI0NTIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjMwMDAiLCJhdWQiOiJnYW1lX2FwaV91c2VycyJ9.21uYwrq7-0-4m83vCOnOrBEh5057Qm-CI-19oMA3M80
+
+{
+"author": "no_one",
+"score": 1,
+"comment": "Trash"
+}
+
+###
+
+POST http://localhost:3000/games/62648d6bc476ac01dcd80a72/releasedates HTTP/1.1
+Content-Type: application/json
+
+{
+"id": null,
+"timeStamp": 1645743600,
+"platformId": null
+}
+
+###
+
+POST http://localhost:3000/companies HTTP/1.1
+Content-Type: application/json
+
+[
+{
+    ""
+"type": "developer",
+"country": "Canada",
+"parentCompanyId": "625f3a0a23345ba753604f9e",
+"name": "Ubisoft Quebec"
+}
+]
+
+###
+
+POST http://localhost:3000/genres HTTP/1.1
+Content-Type: application/json
+
+[
+{
+    "Name": "adventure"
+}
+]
+
+###
+
+DELETE http://localhost:3000/games/62648d6bc476ac01dcd80a85/ratings/1a7fdb72-ff0b-4000-b457-461e21520ed3 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkRhdmUgRGF2aWRzb24iLCJjaXR5IjoiRHVyYnV5IiwibmJmIjoxNjUxMzU4ODUyLCJleHAiOjE2NTEzNjI0NTIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjMwMDAiLCJhdWQiOiJnYW1lX2FwaV91c2VycyJ9.21uYwrq7-0-4m83vCOnOrBEh5057Qm-CI-19oMA3M80
+
+###
+
+DELETE http://localhost:3000/games/62648d6bc476ac01dcd80a72/releasedates/1b43caf8-0246-4d92-8b25-a6a1493b5339 HTTP/1.1
+
+###
+
+POST http://localhost:3000/authentication HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"some_dude",
+    "password":"VeIlIGwAcHtWo0rD123"
+}
