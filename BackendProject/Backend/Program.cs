@@ -14,6 +14,8 @@ builder.Services.AddTransient<IGameRepository, GameRepository>();
 builder.Services.AddTransient<IPlatformRepository, PlatformRepository>();
 builder.Services.AddTransient<IThemeRepository, ThemeRepository>();
 builder.Services.AddTransient<IPlayerPerspectiveRepository, PlayerPerspectiveRepository>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IGameService, GameService>();
 builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
 builder.Services.AddAutoMapper(typeof(Program));
@@ -60,6 +62,19 @@ app.UseAuthorization();
 #endregion
 
 // TODO : clean up + refactor program.cs/validators zodat program.cs niet vol staat met custom validation.
+
+#region PRODUCT
+
+app.MapGet("/products", async (IProductService productService) => Results.Ok(await productService.GetProducts()));
+
+app.MapPost("/products", async (IProductService productService, Product newProduct) =>
+{
+    var result = await productService.AddProduct(newProduct);
+
+    Results.Created("/products/" + result.Id, result);
+});
+
+#endregion
 
 #region AUTHENTICATION
 

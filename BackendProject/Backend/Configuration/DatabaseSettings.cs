@@ -12,4 +12,5 @@ public class DatabaseSettings
     public string? CompaniesCollection { get; set; }
     public string? PlatformsCollection { get; set; }
     public string? GamesCollection { get; set; }
+    public string? ProductsCollection { get; set; }
 }

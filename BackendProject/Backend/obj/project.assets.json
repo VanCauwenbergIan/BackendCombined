@@ -2460,11 +2460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ian Van Cauwenberg\\Desktop\\BackendCombined\\backendproject\\Backend\\Backend.csproj",
+      "projectUniqueName": "c:\\Users\\Ian Van Cauwenberg\\Desktop\\BackendProject\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\Ian Van Cauwenberg\\Desktop\\BackendCombined\\backendproject\\Backend\\Backend.csproj",
+      "projectPath": "c:\\Users\\Ian Van Cauwenberg\\Desktop\\BackendProject\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\Ian Van Cauwenberg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ian Van Cauwenberg\\Desktop\\BackendCombined\\backendproject\\Backend\\obj\\",
+      "outputPath": "c:\\Users\\Ian Van Cauwenberg\\Desktop\\BackendProject\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

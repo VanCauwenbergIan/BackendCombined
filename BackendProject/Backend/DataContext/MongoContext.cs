@@ -12,6 +12,7 @@ public interface IMongoContext
     IMongoCollection<Company> CompaniesCollection { get; }
     IMongoCollection<Platform> PlatformsCollection { get; }
     IMongoCollection<Game> GamesCollection { get; }
+    IMongoCollection<Product> ProductsCollection { get; }
 }
 
 public class MongoContext : IMongoContext
@@ -98,6 +99,14 @@ public class MongoContext : IMongoContext
         get
         {
             return _database.GetCollection<Game>(_settings.GamesCollection);
+        }
+    }
+
+    public IMongoCollection<Product> ProductsCollection
+    {
+        get
+        {
+            return _database.GetCollection<Product>(_settings.ProductsCollection);
         }
     }
 }
